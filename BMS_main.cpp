@@ -3,3 +3,8 @@
 
 #include <iostream>
 using namespace std;
+ int main()
+ {
+ 	cout<< " Hadapn meka"<< endl;
+ 	return 0;
+ }
