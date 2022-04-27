@@ -10,5 +10,6 @@ int main()
 {
     BMS Loyal_Bank;
     cout<< " Hadapn meka"<< endl;
+    cout<< " Test one"<<endl;
     return 0;
 }
