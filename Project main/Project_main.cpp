@@ -5,7 +5,7 @@
 using namespace std;
 class BMS{
     private:
-    
+    int a;
 
 };
 int main()
