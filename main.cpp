@@ -28,16 +28,16 @@ public:
 void account::create_account()
 {
     accountnumber = rand();
-    cout << "\nThe account Number is : " << accountnumber;
-    cout << "\nEnter The Name of The account Holder : ";
-    cin.ignore();
-    cin.getline(name, 50);
-    cout << "\nEnter account type (enter s - saving or c - credit): ";
-    cin >> type;
+    std::cout << "\nThe account Number is : " << accountnumber;
+    std::cout << "\nEnter The Name of The account Holder : ";
+    std::cin.ignore();
+    std::cin.getline(name, 50);
+    std::cout << "\nEnter account type (enter s - saving or c - credit): ";
+    std::cin >> type;
     type = toupper(type);
-    cout << "\nEnter The Initial amount(500 or more for Saving and 1000 or more for current ): ";
-    cin >> deposit;
-    cout << "\n\n\nAccount Created Successfully...";
+    std::cout << "\nEnter The Initial amount(500 or more for Saving and 1000 or more for current ): ";
+    std::cin >> deposit;
+    std::cout << "\n\n\nAccount Created Successfully...";
 }
 
 void account::show_account()
@@ -98,6 +98,7 @@ void delete_account(int);
 void display_all();
 void deposit_withdraw(int, int);
 
+/// Main file
 int main()
 {
     srand(time(nullptr));
@@ -106,7 +107,7 @@ int main()
     for (;;)
     {
 
-        cout << "\t\t=====Simple Bank Management System=====";
+        cout << "\t\t===== University of Ruhuna  \n\t\t\tBank Management System=====\n";
         cout << "\n\t\tPress 1 to Create New Account";
         cout << "\n\t\tPress 2 to Deposit Funds";
         cout << "\n\t\tPress 3 to Withdraw Funds";
@@ -165,6 +166,9 @@ int main()
     return 0;
 }
 
+
+/// functions
+///*********************************************************************************************
 void write_account()
 {
     account ac{};
