@@ -61,8 +61,7 @@ void account::modify_account()
     // cin >> deposit;
 }
 
-void account::deposit_funds(int x)
-{
+void account::deposit_funds(int x) {
     deposit += x;
 }
 
