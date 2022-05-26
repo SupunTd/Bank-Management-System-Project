@@ -139,7 +139,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/JetBrains/CLion 2021.1.2/bin/cmake/win/bin/cmake.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.1/bin/cmake/win/bin/cmake.exe"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -151,7 +151,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/JetBrains/CLion 2021.1.2/bin/cmake/win/bin/cpack.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.1/bin/cmake/win/bin/cpack.exe"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -163,7 +163,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/JetBrains/CLion 2021.1.2/bin/cmake/win/bin/ctest.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.1/bin/cmake/win/bin/ctest.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -699,7 +699,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/JetBrains/CLion 2021.1.2/bin/ninja/win/ninja.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.1/bin/ninja/win/ninja.exe"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -1039,7 +1039,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/JetBrains/CLion 2021.1.2/bin/cmake/win/share/cmake-3.22"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.1/bin/cmake/win/share/cmake-3.22"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",

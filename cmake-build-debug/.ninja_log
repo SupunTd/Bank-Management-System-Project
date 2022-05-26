@@ -1,25 +1,3 @@
 # ninja log v5
-1	617	6730412153900265	CMakeFiles/Bank_Management_System_Project.dir/main.cpp.obj	73e91d789e90a641
-621	1195	6730412159527773	Bank_Management_System_Project.exe	2c115bf15ad029a3
-6	619	6730838718928112	CMakeFiles/Bank_Management_System_Project.dir/main.cpp.obj	73e91d789e90a641
-622	1278	6730838725350369	Bank_Management_System_Project.exe	2c115bf15ad029a3
-5	1319	6730842035731997	CMakeFiles/Bank_Management_System_Project.dir/main.cpp.obj	73e91d789e90a641
-1324	1995	6730842042342526	Bank_Management_System_Project.exe	2c115bf15ad029a3
-5	1092	6730846696520897	CMakeFiles/Bank_Management_System_Project.dir/main.cpp.obj	73e91d789e90a641
-1096	1811	6730846703529550	Bank_Management_System_Project.exe	2c115bf15ad029a3
-4	1409	6730847697399860	CMakeFiles/Bank_Management_System_Project.dir/main.cpp.obj	73e91d789e90a641
-1411	2129	6730847704448410	Bank_Management_System_Project.exe	2c115bf15ad029a3
-4	904	6730848707015278	CMakeFiles/Bank_Management_System_Project.dir/main.cpp.obj	73e91d789e90a641
-906	1544	6730848713246554	Bank_Management_System_Project.exe	2c115bf15ad029a3
-5	1097	6730861129064727	CMakeFiles/Bank_Management_System_Project.dir/main.cpp.obj	73e91d789e90a641
-1100	1838	6730861136310172	Bank_Management_System_Project.exe	2c115bf15ad029a3
-20	2860	6730901109676939	CMakeFiles/Bank_Management_System_Project.dir/main.cpp.obj	73e91d789e90a641
-2868	4862	6730901129108291	Bank_Management_System_Project.exe	2c115bf15ad029a3
-7	1266	6730935622134349	CMakeFiles/Bank_Management_System_Project.dir/main.cpp.obj	73e91d789e90a641
-1269	2015	6730935629474206	Bank_Management_System_Project.exe	2c115bf15ad029a3
-5	1374	6731165794836299	CMakeFiles/Bank_Management_System_Project.dir/main.cpp.obj	73e91d789e90a641
-1376	2052	6731165801462955	Bank_Management_System_Project.exe	2c115bf15ad029a3
-4	823	6731167565280445	CMakeFiles/Bank_Management_System_Project.dir/main.cpp.obj	73e91d789e90a641
-825	1481	6731167571678191	Bank_Management_System_Project.exe	2c115bf15ad029a3
-4	1230	6731993317172539	CMakeFiles/Bank_Management_System_Project.dir/main.cpp.obj	73e91d789e90a641
-1232	2088	6731993325584877	Bank_Management_System_Project.exe	2c115bf15ad029a3
+7	1923	6745783679241151	CMakeFiles/Bank_Management_System_Project.dir/main.cpp.obj	73e91d789e90a641
+1926	3422	6745783692911139	Bank_Management_System_Project.exe	2c115bf15ad029a3
