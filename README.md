@@ -1,344 +1,61 @@
-///# Bank-Management-System-Project
-/// Mini Program Project
+# Bank Management System Project
 
+This is a simple console-based Bank Management System project written in C++. The program allows users to perform various banking operations such as creating accounts, depositing funds, withdrawing funds, checking balance, viewing all account holders, modifying accounts, and closing accounts.
 
-#include <iostream>
-#include <fstream>
-#include <cctype>
-#include <iomanip>
-#include <ctime>
-#include <cstdlib>
-using namespace std;
-class account
-{
-int accountnumber;
-char name[50];
-int deposit;
-char type;
+## Features
 
-public:
-void create_account();
-void show_account();
-void modify_account();
-void deposit_funds(int);
-void draw_funds(int);
-void get_report();
-int get_accountnumber() const;
-int get_funds() const;
-char get_accounttype() const;
-};
+- Create a new account with a random account number.
+- Support two types of accounts: Savings (S) and Credit (C).
+- Set initial deposit limits for each account type.
+- Deposit funds into an existing account.
+- Withdraw funds from an existing account while enforcing minimum balance rules.
+- View individual account details by providing the account number.
+- Display a list of all account holders.
+- Modify account holder details like name and account type.
+- Close an existing account.
+- Secure access to account holder list using a bank password.
 
-void account::create_account()
-{
-accountnumber = rand();
-cout << "\nThe account Number is : " << accountnumber;
-cout << "\nEnter The Name of The account Holder : ";
-cin.ignore();
-cin.getline(name, 50);
-cout << "\nEnter account type (enter s - saving or c - credit): ";
-cin >> type;
-type = toupper(type);
-cout << "\nEnter The Initial amount(500 or more for Saving and 1000 or more for current ): ";
-cin >> deposit;
-cout << "\n\n\nAccount Created Successfully...";
-}
+## How to Use
 
-void account::show_account()
-{
-cout << "\nAccount Number: " << accountnumber;
-cout << "\nAccount Holder Name: " << name;
-cout << "\nType of Account: " << type;
-cout << "\nBalance amount: " << deposit;
-}
+1. Run the program by compiling and executing the C++ code.
+2. Follow the on-screen menu options to perform different banking operations.
+3. To create a new account, select option 1 and provide the necessary details.
+4. To perform transactions (deposit/withdraw), use options 2 and 3 by providing the account number.
+5. Use option 4 to check the balance of a specific account.
+6. Option 5 displays the list of all account holders.
+7. To modify an account, select option 7 and provide the account number.
+8. To close an account, use option 6 by providing the account number.
+9. The program will ask for a bank password to view the list of all account holders (option 5).
+10. The program will keep running until you choose to exit (option 8).
 
-void account::modify_account()
-{
-cout << "\nAccount Number: " << accountnumber;
-cout << "\nModify Account Holder Name: ";
-cin.ignore();
-cin.getline(name, 50);
-cout << "\nModify Type of Account: ";
-cin >> type;
-type = toupper(type);
-// cout << "\nModify Balance amount: ";
-// cin >> deposit;
-}
+## Note
 
-void account::deposit_funds(int x)
-{
-deposit += x;
-}
+- The bank password is hardcoded in the code for simplicity. In real-world applications, it should be stored securely and managed by an authorized personnel.
+- This project is intended for educational purposes and may not cover all real-world banking scenarios.
 
-void account::draw_funds(int x)
-{
-deposit -= x;
-}
+Feel free to use, modify, and contribute to this project!
 
-void account::get_report()
-{
-cout << accountnumber << setw(10) << " " << name << setw(10) << " " << type << setw(6) << deposit << endl;
-}
+## License
 
-int account::get_accountnumber() const
-{
-return accountnumber;
-}
+This project is licensed under the [MIT License](LICENSE).
 
-int account::get_funds() const
-{
-return deposit;
-}
+## Contributing
 
-char account::get_accounttype() const
-{
-return type;
-}
+We welcome contributions to improve the Bank Management System project! If you would like to contribute, please follow these steps:
 
-void write_account();
-void display_sp(int);
-void modify_account(int);
-void delete_account(int);
-void display_all();
-void deposit_withdraw(int, int);
+1. Fork the repository on GitHub.
+2. Create a new branch with a descriptive name for your feature or bug fix.
+3. Implement your changes and improvements.
+4. Test your changes to ensure they work as intended.
+5. Commit your changes with clear commit messages.
+6. Push your changes to your forked repository.
+7. Create a pull request against the original repository.
 
-int main()
-{
-srand(time(nullptr));
-char opt;
-int num;
-for (;;)
-{
+Thank you to the following contributors for their contributions to this project:
 
-        cout << "\t\t=====Simple Bank Management System=====";
-        cout << "\n\t\tPress 1 to Create New Account";
-        cout << "\n\t\tPress 2 to Deposit Funds";
-        cout << "\n\t\tPress 3 to Withdraw Funds";
-        cout << "\n\t\tPress 4 to Check Balance";
-        cout << "\n\t\tPress 5 to View All Account Holder";
-        cout << "\n\t\tPress 6 to Close an Account";
-        cout << "\n\t\tPress 7 to Modify an Account";
-        cout << "\n\t\tPress 8 to Exit the Program";
-        cout << "\n\t\tOption: ";
-        cin >> opt;
-        system("cls");
-        switch (opt)
-        {
-            case '1':
-                write_account();
-                break;
-            case '2':
-                cout << "\n\n\tEnter The account No. : ";
-                cin >> num;
-                deposit_withdraw(num, 1);
-                break;
-            case '3':
-                cout << "\n\n\tEnter The account No. : ";
-                cin >> num;
-                deposit_withdraw(num, 2);
-                break;
-            case '4':
-                cout << "\n\n\tEnter The account No. : ";
-                cin >> num;
-                display_sp(num);
-                break;
-            case '5':
-                display_all();
-                break;
-            case '6':
-                cout << "\n\n\tEnter The account No. : ";
-                cin >> num;
-                delete_account(num);
-                break;
-            case '7':
-                cout << "\n\n\tEnter The account No. : ";
-                cin >> num;
-                modify_account(num);
-                break;
-            case '8':
-                cout << "\n\n\tThanks for using Simple Bank Management System";
-                break;
-            default:
-                cout << "Invalid Option\n";
-        }
-        cin.ignore();
-        cin.get();
-        if (opt == '8')
-            break;
-    }
-    return 0;
-}
+- Supun Thulakshana ([SupunTd](https://github.com/SupunTd))
+- Anupama Morapitiya ([anupamavm](https://github.com/anupamavm))
+- Namal Chandrasekara ([NamalChandrasekara](https://github.com/NamalChandrasekara))
 
-void write_account()
-{
-account ac{};
-ofstream outFile;
-outFile.open("account.dat", ios::binary | ios::app);
-ac.create_account();
-outFile.write(reinterpret_cast<char *>(&ac), sizeof(account));
-outFile.close();
-}
+Your contributions are highly appreciated!
 
-void display_sp(int n)
-{
-account ac{};
-bool flag = false;
-ifstream inFile;
-inFile.open("account.dat", ios::binary);
-if (!inFile)
-{
-cout << "File could not be open !! Press any Key...";
-return;
-}
-cout << "\nBALANCE DETAILS\n";
-
-    while (inFile.read(reinterpret_cast<char *>(&ac), sizeof(account)))
-    {
-        if (ac.get_accountnumber() == n)
-        {
-            ac.show_account();
-            flag = true;
-        }
-    }
-    inFile.close();
-    if (!flag)
-        cout << "\n\nAccount number does not exist";
-}
-
-void modify_account(int n)
-{
-bool found = false;
-account ac{};
-fstream File;
-File.open("account.dat", ios::binary | ios::in | ios::out);
-if (!File)
-{
-cout << "File could not be open !! Press any Key...";
-return;
-}
-while (!File.eof() && !found)
-{
-File.read(reinterpret_cast<char *>(&ac), sizeof(account));
-if (ac.get_accountnumber() == n)
-{
-ac.show_account();
-cout << "\n\nEnter The New Details of account: " << endl;
-ac.modify_account();
-int pos = (-1) * static_cast<int>(sizeof(account));
-File.seekp(pos, ios::cur);
-File.write(reinterpret_cast<char *>(&ac), sizeof(account));
-cout << "\n\n\t Record Updated...";
-found = true;
-}
-}
-File.close();
-if (!found)
-cout << "\n\n Record Not Found ";
-}
-
-void delete_account(int n)
-{
-account ac{};
-ifstream inFile;
-ofstream outFile;
-inFile.open("account.dat", ios::binary);
-if (!inFile)
-{
-cout << "File could not be open !! Press any Key...";
-return;
-}
-outFile.open("Temp.dat", ios::binary);
-inFile.seekg(0, ios::beg);
-while (inFile.read(reinterpret_cast<char *>(&ac), sizeof(account)))
-{
-if (ac.get_accountnumber() != n)
-{
-outFile.write(reinterpret_cast<char *>(&ac), sizeof(account));
-}
-}
-
-    inFile.close();
-    outFile.close();
-    remove("account.dat");
-    rename("Temp.dat", "account.dat");
-    cout << "\n\n\tRecord Deleted...";
-}
-
-void display_all()
-{
-int bankPassword = 12345, enteredPassword;
-cout << "Enter the BANK PASSWORD: \n";
-cin >> enteredPassword;
-if (enteredPassword == bankPassword)
-{
-account ac{};
-ifstream inFile;
-inFile.open("account.dat", ios::binary);
-if (!inFile)
-{
-cout << "File could not be open !! Press any Key...";
-return;
-}
-
-        cout << "\n\n\t\tACCOUNT HOLDER LIST\n\n";
-        cout << "====================================================\n";
-        cout << "Account No.      Name           Type      Balance\n";
-        cout << "====================================================\n";
-        while (inFile.read(reinterpret_cast<char *>(&ac), sizeof(account)))
-        {
-            ac.get_report();
-        }
-        inFile.close();
-
-    }
-    else {
-        cout << "Please enter the correct password.\n";
-    }
-}
-
-void deposit_withdraw(int n, int option)
-{
-int amt;
-bool found = false;
-account ac{};
-fstream File;
-File.open("account.dat", ios::binary | ios::in | ios::out);
-if (!File)
-{
-cout << "File could not be open !! Press any Key...";
-return;
-}
-while (!File.eof() && !found)
-{
-File.read(reinterpret_cast<char *>(&ac), sizeof(account));
-if (ac.get_accountnumber() == n)
-{
-ac.show_account();
-if (option == 1)
-{
-cout << "\n\n\tTO DEPOSIT AMOUNT ";
-cout << "\n\nEnter The amount to be deposited: ";
-cin >> amt;
-ac.deposit_funds(amt);
-}
-if (option == 2)
-{
-cout << "\n\n\tTO WITHDRAW AMOUNT ";
-cout << "\n\nEnter The amount to be withdraw: ";
-cin >> amt;
-int bal = ac.get_funds() - amt;
-if ((bal < 500 && ac.get_accounttype() == 'S') || (bal < 1000 && ac.get_accounttype() == 'C'))
-cout << "Insufficient balance";
-else
-ac.draw_funds(amt);
-}
-int pos = (-1) * static_cast<int>(sizeof(ac));
-File.seekp(pos, ios::cur);
-File.write(reinterpret_cast<char *>(&ac), sizeof(account));
-cout << "\n\n\t Record Updated";
-found = true;
-}
-}
-File.close();
-if (!found)
-cout << "\n\n Record Not Found ";
-}
